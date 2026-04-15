@@ -1,38 +1,47 @@
 # Autonomous Insurance Claims Processing Agent
 
-This is a lightweight FNOL (First Notice of Loss) processing agent built for the
+This is a lightweight FNOL (First Notice of Loss) processing agent built for the  
 Synapx Junior Software Engineer assessment.
 
-The agent processes an FNOL document, extracts key fields, validates required
-information, and routes the claim using clear, rule-based logic.
+The agent processes FNOL documents, extracts key structured fields, validates required information, and routes claims using a priority-based rule engine.
 
-## Functionality
-- Extracts policy, incident, claimant, and asset details from FNOL text
+---
+
+## 🚀 Functionality
+
+- Extracts policy, incident, claimant, and asset details from FNOL text (PDF/TXT)
 - Detects missing mandatory fields
-- Routes claims based on business rules
-- Provides a clear explanation for each routing decision
-- Outputs results in JSON format
+- Routes claims based on defined business rules
+- Provides clear reasoning for each routing decision
+- Outputs structured results in JSON format
 
-## Routing Rules
-- Estimated damage below 25,000 → Fast-track
-- Missing mandatory fields → Manual review
-- Fraud-related keywords → Investigation flag
-- Injury-related claims → Specialist queue
+---
 
-## How to Run
-1. Install dependency:
+## ⚙️ Design Approach
 
-pip install pdfplumber
+The system follows a simple processing pipeline:
 
+Extraction → Validation → Routing → Output
 
-2. Run the script:
+Routing is handled using a **priority-based rule engine**:
 
+1. Manual Review (if mandatory fields are missing)
+2. Investigation (if fraud-related keywords detected)
+3. Specialist Queue (if claim type is injury)
+4. Fast-track (if damage < ₹25,000)
+5. Standard Processing (default)
 
-python app.py sample_fnol.txt
+---
 
+## 📊 Routing Rules
 
-The output will be printed as a JSON object in the terminal.
+- Estimated damage below ₹25,000 → Fast-track  
+- Missing mandatory fields → Manual review  
+- Fraud-related keywords → Investigation  
+- Injury-related claims → Specialist queue  
 
-## Notes
-- The FNOL data used is fully synthetic and contains no real personal information.
-- AI tools were used to accelerate implementation and validate logic.
+---
+
+## ▶️ How to Run
+
+### 1. Install dependency
