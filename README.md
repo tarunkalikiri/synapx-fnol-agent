@@ -45,3 +45,29 @@ Routing is handled using a **priority-based rule engine**:
 ## ▶️ How to Run
 
 ### 1. Install dependency
+
+pip install pdfplumber
+
+
+### 2. Run the script
+
+python app.py sample_fnol.txt
+
+
+---
+
+## 📁 Sample Test Cases
+
+- `sample_fnol.txt` → Fast-track scenario  
+- `fraud_case.txt` → Investigation scenario  
+- `missing_fields.txt` → Manual review scenario  
+
+---
+
+## 📌 Notes
+
+- FNOL data used is fully synthetic and contains no real personal information  
+- Designed with a modular and extensible approach  
+- AI tools were used to accelerate development and validate logic  
+
+---
