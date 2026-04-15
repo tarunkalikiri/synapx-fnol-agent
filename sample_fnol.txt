@@ -2,14 +2,21 @@ Policy Number: POLTEST123
 Policyholder Name: Test User Alpha
 Effective From: 01/01/2024
 Effective To: 01/01/2025
+
 Incident Date: 15/06/2024
 Incident Time: 14:20
 Location: Sample City
 Description of Loss: Minor vehicle impact at low speed with cosmetic damage only
+
 Claimant Name: Test User Alpha
+Third Party: None
+Contact Details: 9876543210
+
 Claim Type: motor
+
 Asset Type: Car
 Asset ID: TESTVEH001
 Estimated Damage: 18000
+
 Initial Estimate: 18000
 Attachments: Yes
